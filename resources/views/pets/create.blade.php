@@ -34,7 +34,7 @@
 <form action="{{ route('pets.store')}}" method="POST">
 	@csrf
 
-<div class="row p-3 mb-2 bg-light text-dark">
+<div class="row p-3 mb-2  bg-secondary text-white">
 	<div class="col-xs-12 col-sm-12 col-md-12">
 		<div class="form-group">
 			<strong>Name of Pet:</strong>
