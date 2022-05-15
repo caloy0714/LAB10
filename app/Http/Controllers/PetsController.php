@@ -33,12 +33,13 @@ class PetsController extends Controller
             ->with('success','Stored Successfully.');
     }
 
-    public function show(Pet $pet)
-    {
-
-    }
 
     public function edit(Pet $pet)
+    {
+        return view('pets.edit',compact('pet'));
+    }
+
+    public function show(Pet $pet)
     {
         return view('pets.edit',compact('pet'));
     }

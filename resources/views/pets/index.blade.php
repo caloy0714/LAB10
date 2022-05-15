@@ -2,8 +2,15 @@
 
 @section('content')
 <div class="pull-left">
-	<h3>Pet Register</h3>
+<nav class="navbar navbar-light bg-secondary text-white">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1"><h3>Pet Register</h3></span>
+  </div>
+</nav>
+	
 </div>
+</br>
+</br>
 
 <div class="row">
 	<div class="col-lg-12 margin-tb">
@@ -19,7 +26,7 @@
 	</div>
 @endif
 
-<table class="table table-striped">
+<table class="table table-success table-striped">
 	<tr>
 		<th>ID</th>
 		<th>Name of Pet</th>
@@ -38,11 +45,12 @@
 
 	<td>
 		<form action="{{route('pets.destroy',$pet->id)}}" method="POST">
+			
 			<a class="btn btn-primary" href="{{route('pets.edit', $pet->id)}}">Edit</a>
 
 			@csrf
 			@method('DELETE')
-
+			
 			<button type="submit" class="btn btn-danger">Delete</button>
 		</form>
 	</td>
