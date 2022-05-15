@@ -45,7 +45,7 @@
 
 	<td>
 		<form action="{{route('pets.destroy',$pet->id)}}" method="POST">
-			
+			<a href="{{route('pets.show', $pet->id)}}" class="btn btn-info"> View</a>
 			<a class="btn btn-primary" href="{{route('pets.edit', $pet->id)}}">Edit</a>
 
 			@csrf

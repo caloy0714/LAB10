@@ -41,7 +41,7 @@ class PetsController extends Controller
 
     public function show(Pet $pet)
     {
-        return view('pets.edit',compact('pet'));
+        return view('pets.show',compact('pet'));
     }
 
     public function update(Request $request, Pet $pet)
